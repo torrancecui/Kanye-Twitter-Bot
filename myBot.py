@@ -53,9 +53,7 @@ def replyToTweets():
         print("replied to @" + mention.user.screen_name)
 
 if __name__ == "__main__":
-    while True:
-        try:
-            replyToTweets()
-        except tweepy.TweepError as e:
-            print("all responses sent")
-        time.sleep(15)
+    try:
+        replyToTweets()
+    except tweepy.TweepError as e:
+        print("all responses sent")
