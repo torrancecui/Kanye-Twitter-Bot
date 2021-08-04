@@ -16,7 +16,10 @@ def whenImInNeed():
     return "when i'm in nEEEEed..."
 
 def iMissTheOldKanye():
-    return "straight from the go kanye, chop up the soul kanye, set on his goals kanye, i hate the new kanye, the bad mood kanye, The always rude kanye, spaz in the news kanye.."
+    return "straight from the go kanye, chop up the soul kanye, set on his goals kanye, i hate the new kanye, the bad mood kanye, the always rude kanye, spaz in the news kanye.."
+
+def sheBleachedHerAsshole():
+    return "and she just bleached her asshole"
 
 def retrieve_last_seen_id(file_name):
     f_read = open(file_name, 'r')
@@ -44,6 +47,8 @@ def replyToTweets():
             api.update_status('@' + mention.user.screen_name + " " + whenImInNeed(), mention.id)
         elif '#imisstheoldkanye' in mention.full_text.lower():
             api.update_status('@' + mention.user.screen_name + " " + iMissTheOldKanye(), mention.id)
+        elif '#nowififuckthismodel' in mention.full_text.lower():
+            api.update_status('@' + mention.user.screen_name + " " + sheBleachedHerAsshole(), mention.id)
             
         print("replied to @" + mention.user.screen_name)
 
