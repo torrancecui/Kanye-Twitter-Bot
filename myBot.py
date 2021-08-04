@@ -19,13 +19,17 @@ def iMissTheOldKanye():
 
 def replyToTweets():
 
-    mentions = api.mentions_timeline()
+    mentions = api.mentions_timeline(tweet_mode = 'extended')
 
     for mention in mentions:
         if '#shetakemymoney' in mention.full_text.lower():
-            api.update_status('@' + mention.user.screen_name + whenImInNeed(), mention.id)
+            api.update_status('@' + mention.user.screen_name + " " + whenImInNeed(), mention.id)
+        elif '#imisstheoldkanye' in mention.full_text.lower():
+            api.update_status('@' + mention.user.screen_name + " " + iMissTheOldKanye(), mention.id)
+            
+        print("replied to @" + mention.user.screen_name)
 
 if __name__ == "__main__":
     while True:
-        time.sleep(15)
+        time.sleep(5)
         replyToTweets()
