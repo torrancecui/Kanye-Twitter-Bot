@@ -1,6 +1,7 @@
 import tweepy
 import time
 
+## not best practice just here for simplicity
 consumer_key = "moUByhaC0XrSMvFT3zfCQBnXZ"
 consumer_secret = "wvqLyBWM9EnE7u2s0qcMLVBeAXm6y95VbKdUuIZZV0acwtcHV2"
 access_token = "1423018716321566720-ReNGB2xOPhSDBBbsdr8fpKhFIM55PW"
